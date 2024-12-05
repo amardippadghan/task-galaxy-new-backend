@@ -1,0 +1,26 @@
+{
+    "en": {
+        "S001": "Project get successfully",
+        "S002" : "Project updated successfully",
+        "S003" : "Project deleted successfully",
+        "S004" : "Project added successfully",
+        "S005" : "Project data fetched successfully",
+
+
+
+        "E001": "All fields are required",
+        "E002": "Project does not exist",
+        "E003": "Error adding Project",
+        "E004": "Error updating Project",
+        "E005": "Error deleting Project",
+        "E006": "Error fetching Project data",
+        "E007": "ProjectId not found",
+        "E008": "You cannot send Email in Body of update Request",
+        "E009": "You cannot send phone in Body of update Request",
+        "E010": "Employee cannot create Project",
+        "E011": "Employee cannot get Project"
+
+
+    }
+
+}

@@ -1,0 +1,22 @@
+{
+    "en" : {
+        "S001" : "Deparment get successfully",
+        "S002" : "Deparment updated successfully",
+        "S003" : "Deparment deleted successfully",
+        "S004" : "Deparment added successfully",
+        "S005" : "Deparment data fetched successfully",
+         
+         "E001" : "All fields are required",
+         "E002" : "Deparment does not exist",
+         "E003" : "Error adding Deparment",
+         "E004" : "Error updating Deparment",
+         "E005" : "Error deleting Deparment",
+         "E006" : "Error fetching Deparment data",
+         "E007" : "DeparmentId not found",
+         "E008" : "You cannot send Email in Body of update Request",
+         "E009" : "You cannot send phone in Body of update Request",
+         "E010" : "Deparment cannot create Project",
+         "E011" : "Deparment cannot get Project",
+         "E012" : "Id is Required to update Deparment"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "en" : {
+        "S001" : "Module get successfully",
+        "S002" : "Module updated successfully",
+        "S003" : "Module deleted successfully",
+        "S004" : "Module added successfully",
+        "S005" : "Module data fetched successfully",
+         
+         "E001" : "All fields are required",
+         "E002" : "Module does not exist",
+         "E003" : "Error adding Module",
+         "E004" : "Error updating Module",
+         "E005" : "Error deleting Module",
+         "E006" : "Error fetching Module data",
+         "E007" : "ModuleId not found",
+         "E008" : "You cannot send Email in Body of update Request",
+         "E009" : "You cannot send phone in Body of update Request",
+         "E010" : "Module cannot create Project",
+         "E011" : "Module cannot get Project",
+         "E012" : "Id is Required to update Module"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "en" : {
+        "S001" : "task get successfully",
+        "S002" : "task updated successfully",
+        "S003" : "task deleted successfully",
+        "S004" : "task added successfully",
+        "S005" : "task data fetched successfully",
+         
+         "E001" : "All fields are required",
+         "E002" : "task does not exist",
+         "E003" : "Error adding task",
+         "E004" : "Error updating task",
+         "E005" : "Error deleting task",
+         "E006" : "Error fetching task data",
+         "E007" : "taskId not found",
+         "E008" : "You cannot send Email in Body of update Request",
+         "E009" : "You cannot send phone in Body of update Request",
+         "E010" : "task cannot create Project",
+         "E011" : "task cannot get Project",
+         "E012" : "Id is Required to update task"
+    }
+}
