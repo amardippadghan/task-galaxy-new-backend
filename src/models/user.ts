@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document, PaginateModel } from "mongoose";
 import { USER_TYPE } from "../constants/types/userType";
 import  paginate  from "mongoose-paginate-v2";
 import aggregatePaginate from "mongoose-aggregate-paginate-v2";
@@ -42,4 +42,4 @@ userSchema.plugin(aggregatePaginate);
 
 
 
-export const UserModel = model<userDocument>("user", userSchema);
+export const UserModel = model<userDocument,PaginateModel<userDocument>>("user", userSchema);

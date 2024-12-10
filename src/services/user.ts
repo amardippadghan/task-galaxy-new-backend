@@ -1,3 +1,4 @@
+import { FilterQuery, PaginateOptions } from "mongoose";
 import { infoLogger , errorLogger , dataLogger } from "../core/logger";
 import {UserModel ,  userDocument } from "../models/user";
 
@@ -13,7 +14,22 @@ export const userService = {
             throw error;
             
         }
-    }
+    },
+
+
+    paginateUser : async (filter : any , options : PaginateOptions) => {
+        infoLogger("START:- get user  function");
+        try {
+            
+            const result = await UserModel.paginate(filter, options);
+            return result;
+            
+        } catch (error) {
+            errorLogger("error in updateUser function", error);
+            throw error;
+            
+        }
+    } 
     
 };
 
