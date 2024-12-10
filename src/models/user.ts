@@ -8,6 +8,9 @@ export interface userDocument extends Document {
     email: string;
     phone?: string;
     password: string;
+    deparment?: string;
+    joiningDate?: Date;
+    address?: string;
     type: string;
     role?: string;
     status: number;
@@ -17,8 +20,11 @@ const userSchema = new Schema<userDocument>({
     name: { type: String},
     email: { type: String, required: true},
     company: { type: Schema.Types.ObjectId  , ref: "company" },
+    deparment: { type: Schema.Types.ObjectId  , ref: "deparment" },
     phone: { type: String },
     password: { type: String },
+    joiningDate: { type: Date },
+    address: { type: String },
     type: { type: String, required: true , enum : USER_TYPE },
     status: { type: Number, enum: [0, 1], default: 1 },
 }, {
