@@ -74,14 +74,14 @@ export const saveProjectRoute = async (req: any, res: any) => {
 export const getProjectRoute = async (req: any, res: any) => {
   try {
     const { id, company, page, limit } = req.query;
-    if(req.user.type === USER_TYPE.EMPLOYEE ){
-      const response = failureResponse({
-        handler: "project",
-        messageCode: "E011",
-        req: req,
-      });
-      return res.status(response?.statusCode).send(response);
-    }
+    // if(req.user.type === USER_TYPE.EMPLOYEE ){
+    //   const response = failureResponse({
+    //     handler: "project",
+    //     messageCode: "E011",
+    //     req: req,
+    //   });
+    //   return res.status(response?.statusCode).send(response);
+    // }
     const filter = {} as FilterQuery<projectDocument>;
     if (id) {
       const result = await findOneProject(id);
@@ -100,9 +100,9 @@ export const getProjectRoute = async (req: any, res: any) => {
         data: result,
       });
       return res.status(response?.statusCode).send(response);
-    } else if (company) {
-      filter.company = company;
-    }
+    } 
+      filter.company = req.user.company || company;
+    
     const options = {
       page: page || 1,
       limit: limit || 10,
