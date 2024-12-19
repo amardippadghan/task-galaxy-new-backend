@@ -7,12 +7,24 @@ import {
 } from "../../../core/response";
 import { taskDocument } from "../../../models/task";
 import { createTask, paginateTask, updateTask } from "../../../services/task";
+import { USER_TYPE } from "../../../constants/types/userType";
 
 
 
 export const CreateTaskRoute = async (req: any, res: any) => {
   try {
 
+
+    if(req.user.type !== USER_TYPE.COMPANY){
+      const response = failureResponse({
+        handler: "task",
+        messageCode: "E013",
+        req: req,
+      });
+      return res.status(response?.statusCode).send(response);
+    }
+
+     req.body.company = req.user._id
      const {projectId ,module, startDate,deadline} = req.body as taskDocument
 
      if(!projectId || !module || !startDate || !deadline){
@@ -54,7 +66,7 @@ export const CreateTaskRoute = async (req: any, res: any) => {
 
 export const getTaskRoute = async (req: any, res: any) => {
   try {
-    const { page, limit , projectId , module  } = req.query;
+    const { page, limit , projectId , module  , company } = req.query;
     const filter = {} as FilterQuery<taskDocument>;
     const options = {
       page: page || 1,
@@ -65,7 +77,7 @@ export const getTaskRoute = async (req: any, res: any) => {
 
     if (projectId) filter.projectId = projectId;
     if (module) filter.module = module;
-
+    if(company) filter.company = company;
     const result = await paginateTask(filter, options);
 
     if (!result) {

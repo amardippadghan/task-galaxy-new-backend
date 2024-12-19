@@ -4,6 +4,7 @@ import userMessages from "../modules/UserModule/user.json"
 import projectMessages from "../modules/ProjectModule/project.json"
 import deparmentMessages from "../modules/DeparmentModule/deparment.json"
 import moduleMessages from "../modules/ModuleModule/module.json"
+import taskMessages from "../modules/TaskModule.ts/task.json"
 
 const messageCode: Record<string, any> = {
   hello: helloMessages,
@@ -11,7 +12,8 @@ const messageCode: Record<string, any> = {
   user : userMessages,
   project : projectMessages,
   deparment : deparmentMessages,
-  module : moduleMessages
+  module : moduleMessages,
+  task : taskMessages
 
 };
 

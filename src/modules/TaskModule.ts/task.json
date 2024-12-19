@@ -17,6 +17,7 @@
          "E009" : "You cannot send phone in Body of update Request",
          "E010" : "task cannot create Project",
          "E011" : "task cannot get Project",
-         "E012" : "Id is Required to update task"
+         "E012" : "Id is Required to update task",
+         "E013" : "Only admin can add task"
     }
 }

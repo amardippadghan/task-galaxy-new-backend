@@ -4,6 +4,7 @@ import aggregatePaginate from "mongoose-aggregate-paginate-v2";
 export interface taskDocument extends Document {
     TaskTitle : string;
     projectId : Types.ObjectId
+    company : Types.ObjectId
     module : Types.ObjectId
     taskDescription: string
     startDate : Date
@@ -19,6 +20,7 @@ export interface taskDocument extends Document {
 
 const taskSchema = new Schema<taskDocument>({
     TaskTitle: { type: String},
+    company : { type: Schema.Types.ObjectId  , ref: "user" },
     projectId: { type: Schema.Types.ObjectId  , ref: "project" , required : true},
     module: { type: Schema.Types.ObjectId  , ref: "module" , required : true},
     taskDescription: { type: String },

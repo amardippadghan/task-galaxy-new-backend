@@ -14,6 +14,7 @@ import userRoutes from "./modules/UserModule";
 import projectRoutes from "./modules/ProjectModule";
 import deparmentRoutes from "./modules/DeparmentModule";
 import moduleRoutes from "./modules/ModuleModule";
+import taskRoutes from "./modules/TaskModule.ts";
 
 
 
@@ -36,6 +37,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/project", projectRoutes);
 app.use("/api/deparment", deparmentRoutes);
 app.use("/api/module" , moduleRoutes)
+app.use("/api/task" , taskRoutes)
 
 
 
